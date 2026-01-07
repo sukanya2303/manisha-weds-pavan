@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Estonia&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap');
+
+body {
+    font-family: 'Estonia', cursive;
+    background: #fdf7f3;
+    overflow: hidden; /* disabled until card opens */
+  }
+
+  h1, h2, h3 {
+    font-family: 'Estonia', cursive;
+    color: #7b3f3f;
+  }
+  p{
+    font-family: "Aref Ruqaa Ink", serif;
+  }
+
+  section {
+    padding: 80px 0;
+  }
+
+  /* =========================
+     CARD CONTAINER
+  ========================== */
+  .card-wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1500px;
+    background: linear-gradient(to bottom, #f8e1dc, #fff);
+  }
+
+  .wedding-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1.2s ease-in-out;
+  }
+
+  /* Open State */
+  /* .wedding-card.open {
+    transform: rotateY(-180deg);
+  } */
+
+  /* =========================
+     CARD SIDES
+  ========================== */
+  /* =========================
+   CARD FRONT VIDEO
+========================= */
+
+.card-front {
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .card-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+
+  
+  /* Fade-out animation */
+  .fade-out {
+    animation: fadeOut 1.2s ease forwards;
+  }
+  
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      transform: scale(1.05);
+    }
+  }
+  
+
+  /* Back Content */
+  .card-back {
+    background: #fffaf7;
+    /* transform: rotateY(180deg); */
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  /* =========================
+     SCROLL CONTENT
+  ========================== */
+  /* =========================
+   HERO BACKGROUND VIDEO
+========================= */
+
+.hero-video-section {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+  
+  /* Video fills section */
+  .hero-bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  /* Dark overlay for readability */
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 5;
+  }
+  
+  /* Text content */
+  .hero-content {
+    position: relative;
+    z-index: 900;
+  }
+  
+  .hero-content h1 {
+    font-size: clamp(2.8rem, 6vw, 3.5rem);
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  .hero-content .lead{
+    font-size: 1.3rem;
+  }
+  .hero-content .hr-line{
+    margin-top: 50px;
+  }
+  .hero-content .date{
+    margin-top: 30px;
+  }
+
+  .down-arrow {
+    position: absolute;
+    top: calc(60vh - 50px);
+    left: calc(50% - 5px);
+    width: 0;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 2px;
+    animation: jumpInfinite 1.5s infinite;
+  }
+  @keyframes jumpInfinite {
+    0% {
+      margin-top: 0;
+    }
+    50% {
+      margin-top: 10px;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+  .down-arrow:after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: -8px;
+    width: 16px;
+    height: 16px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+    border-radius: 4px;
+    transform: rotateZ(45deg);
+  }
+  
+  .scroll-content {
+    display: none;
+  }
+
+  .scroll-content.show {
+    display: block;
+  }
+
+  /* =========================
+   COUNTDOWN SECTION
+========================= */
+
+.countdown-section {
+    background: #8a8f6a; /* olive green like reference */
+    color: #fff;
+    padding: 100px 0;
+  }
+  
+  .countdown-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    margin-bottom: 10px;
+  }
+  
+  .countdown-subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 50px;
+  }
+  
+  /* Grid layout */
+  .countdown-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    gap: 24px;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  
+  /* Individual boxes */
+  .count-box {
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 30px 10px;
+    border-radius: 10px;
+  }
+  
+  .count-box span {
+    display: block;
+    font-size: clamp(2.4rem, 6vw, 3.2rem);
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .count-box small {
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    opacity: 0.85;
+  }
+  
+  /* Desktop layout */
+  @media (min-width: 768px) {
+    .countdown-grid {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 700px;
+    }
+  }
+  
+  /* =========================
+     SECTION COLORS
+  ========================== */
+  #details {
+    background: #fff;
+  }
+
+  #story {
+    background: #fdf0eb;
+  }
+
+  #rsvp {
+    background: #fff;
+  }
+
+  #registry {
+    background: #fdf0eb;
+  }
+
+ 
