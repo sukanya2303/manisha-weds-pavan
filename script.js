@@ -12,10 +12,10 @@ document.addEventListener("click", () => {
   // Play video
   video.play();
 
-  // ⏱️ Let video play for 6 seconds (change to 5–10 as needed)
+  // ⏱️ Let video play for 3 seconds (change to 5–10 as needed)
   setTimeout(() => {
     video.classList.add("fade-out");
-  }, 6000);
+  }, 3000);
 
   // 💌 Open card AFTER fade
 //   setTimeout(() => {
@@ -23,11 +23,26 @@ document.addEventListener("click", () => {
 //   }, 7200);
 
   // ⬇️ Enable scroll & move to content
+  // setTimeout(() => {
+  //   document.body.style.overflow = "auto";
+  //   scrollContent.classList.add("show");
+  //   scrollContent.scrollIntoView({ behavior: "smooth" });
+  // }, 8200);
+
   setTimeout(() => {
     document.body.style.overflow = "auto";
     scrollContent.classList.add("show");
-    scrollContent.scrollIntoView({ behavior: "smooth" });
+  
+    // 🔥 REMOVE opening section
+    document.querySelector(".card-wrapper").classList.add("hidden");
+  
+    // Scroll to content top
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   }, 8200);
+  
 });
 
 
