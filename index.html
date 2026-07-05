@@ -16,6 +16,7 @@
 
   <!-- GSAP -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
@@ -271,7 +272,7 @@
 
     <textarea name="message" placeholder="Message for the bride and groom (optional)"></textarea>
 
-    <button>Send Confirmation</button>
+    <button type="submit">Send Confirmation</button>
     <p id="response"></p>
   </form>
 
@@ -304,88 +305,7 @@
   <script src="script.js" defer></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-  <script>
-    const intro = document.getElementById("introVideo");
-const video = document.getElementById("weddingVideo");
-const tapText = document.getElementById("tapText");
-const hero = document.querySelector(".hero");
-
-let started = false;
-
-// Pause on first frame
-video.pause();
-video.currentTime = 0;
-
-intro.addEventListener("click", () => {
-
-    if(started) return;
-    started = true;
-
-    // Hide text
-    gsap.to(tapText,{
-        opacity:0,
-        duration:0.5
-    });
-
-    // Optional: Start background music
-    // music.play();
-
-    // Play video
-    video.play();
-
-});
-
-// When video completes
-video.addEventListener("ended", () => {
-
-    gsap.timeline()
-
-    .to("#introVideo",{
-        opacity:0,
-        duration:1
-    })
-
-    .set("#introVideo",{
-        display:"none"
-    })
-
-    .to(".hero",{
-        opacity:1,
-        duration:1.2
-    });
-
-});
-
-function startInvitation(){
-
-    gsap.to(intro,{
-        opacity:0,
-        duration:1,
-        onComplete(){
-
-            intro.remove();
-
-            document.body.classList.add("loaded");
-
-            gsap.fromTo(hero,
-                {
-                    opacity:0,
-                    scale:1.05
-                },
-                {
-                    opacity:1,
-                    scale:1,
-                    duration:1.5,
-                    ease:"power3.out"
-                }
-            );
-
-        }
-    });
-
-}
-</script>
-
+  
 </body>
 
 </html>
