@@ -36,8 +36,8 @@
 <body>
     <!-- Background Music -->
     <audio id="bgMusic" autoplay loop preload="auto">
-    <source src="assets/bg-music.mp3" type="audio/mpeg">
-</audio>
+        <source src="bg-music.mp3" type="audio/mpeg">
+    </audio>
     <!-- <button id="musicToggle" class="music-btn">🔊</button> -->
 
     <section class="wedding-banner">
@@ -81,8 +81,8 @@
                 </span>
 
             </h1>
-<!-- Divider -->
-        <!-- <div class="hero-divider"></div> -->
+            <!-- Divider -->
+            <!-- <div class="hero-divider"></div> -->
             <p class="hero-description">
                 Join us as we celebrate the beginning of our forever with
                 the people we love most.
@@ -90,7 +90,7 @@
 
         </div>
 
-        
+
 
         <!-- Bottom Glass Card -->
         <div class="event-card">
@@ -326,20 +326,20 @@
 
     <!-- Bg music -->
     <script>
-const bgMusic = document.getElementById("bgMusic");
+        const bgMusic = document.getElementById("bgMusic");
 
-bgMusic.volume = 0.5;
+        bgMusic.volume = 0.5;
 
-window.addEventListener("load", () => {
-    bgMusic.play()
-        .then(() => {
-            console.log("Music autoplayed");
-        })
-        .catch(err => {
-            console.log("Autoplay blocked:", err);
+        window.addEventListener("load", () => {
+            bgMusic.play()
+                .then(() => {
+                    console.log("Music autoplayed");
+                })
+                .catch(err => {
+                    console.log("Autoplay blocked:", err);
+                });
         });
-});
-</script>
+    </script>
 
     <!-- main -->
     <script>
@@ -787,6 +787,25 @@ window.addEventListener("load", () => {
 
             observer.observe(title);
 
+        });
+
+        // RSVP form
+        document.getElementById("rsvpForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const form = e.target;
+            const data = Object.fromEntries(new FormData(form));
+
+            const res = await fetch("/api/rsvp", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            });
+
+            const result = await res.json();
+            document.getElementById("response").innerText = result.message;
+
+            if (result.success) form.reset();
         });
     </script>
 

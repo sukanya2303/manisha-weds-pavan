@@ -25,22 +25,95 @@ gsap.utils.toArray("section").forEach(section => {
 
 
 // RSVP
-document.getElementById("rsvpForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
+// document.getElementById("rsvpForm").addEventListener("submit", async (e) => {
+//   e.preventDefault();
 
-  const form = e.target;
-  const data = Object.fromEntries(new FormData(form));
+//   const form = e.target;
+//   const data = Object.fromEntries(new FormData(form));
 
-  const res = await fetch("/api/rsvp", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data)
-  });
+//   const res = await fetch("/api/rsvp", {
+//     method: "POST",
+//     headers: { "Content-Type": "application/json" },
+//     body: JSON.stringify(data)
+//   });
 
-  const result = await res.json();
-  document.getElementById("response").innerText = result.message;
+//   const result = await res.json();
+//   document.getElementById("response").innerText = result.message;
 
-  if (result.success) form.reset();
+//   if (result.success) form.reset();
+// });
+
+
+// RSVP form 
+document.addEventListener("DOMContentLoaded", () => {
+
+    const form = document.getElementById("rsvpForm");
+    const response = document.getElementById("response");
+
+    if (!form) return;
+
+    form.addEventListener("submit", async (e) => {
+
+        e.preventDefault();
+
+        const button = form.querySelector("button");
+        const originalText = button.textContent;
+
+        button.disabled = true;
+        button.textContent = "Sending...";
+
+        response.textContent = "";
+
+        try {
+
+            const data = Object.fromEntries(
+                new FormData(form).entries()
+            );
+
+            const res = await fetch("/api/rsvp", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+
+            // Check if response is actually JSON
+            const contentType = res.headers.get("content-type");
+
+            if (!contentType || !contentType.includes("application/json")) {
+                throw new Error(
+                    `Server returned ${res.status} instead of JSON`
+                );
+            }
+
+            const result = await res.json();
+
+            if (!res.ok || !result.success) {
+                throw new Error(
+                    result.message || "Submission failed"
+                );
+            }
+
+            response.textContent = result.message;
+
+            form.reset();
+
+        } catch (error) {
+
+            console.error("RSVP ERROR:", error);
+
+            response.textContent =
+                error.message || "Something went wrong. Please try again.";
+
+        } finally {
+
+            button.disabled = false;
+            button.textContent = originalText;
+
+        }
+
+    });
+
 });
-
 
