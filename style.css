@@ -269,7 +269,7 @@ body {
     }
 
     .banner-content {
-        padding: 30px 24px;
+        padding: 100px 24px;
     }
 
     .tag {
@@ -281,13 +281,15 @@ body {
     .hero-title {
         font-size: clamp(46px, 12vw, 70px);
         max-width: 100%;
-        /* margin: 40px 0; */
+        margin: 40px 0;
     }
-
+    .name-block small {
+        font-size: 16px;
+    }
     .hero-description {
         /* width:85%; */
         margin-top: 35px;
-        font-size: 15px;
+        font-size: 20px;
     }
 
     .hero-divider {
@@ -1242,20 +1244,18 @@ canvas {
 
 .event-card {
 
-    position: relative;
-    width: calc(50% - 32px);
-
-    flex-direction: column;
-    margin: -30px auto 0;
-    
-    display: flex;
-    align-items: center;
-
-    border-radius: 24px;
+    position: relative; 
+    width: calc(50% - 32px); 
+    flex-direction: column; 
+    margin: -30px auto 0; 
+    display: flex; 
+    align-items: center; 
+    border-radius: 24px; 
     overflow: hidden;
 
     /* background: rgba(50, 50, 50, 0.838); */
-    background: #f9cd82ea;
+    /* background: #f9cd82ea; */
+    background: #a9153d;
     /* backdrop-filter: blur(25px); */
     border: 1px solid rgba(255, 255, 255, 0.18);
 
@@ -1289,13 +1289,13 @@ canvas {
     font-size: 35px;
     margin-bottom: 8px;
     font-weight: 500;
-    color: #f3631b;
+    color: #fffefd;
     font-family: "Crimson", serif;
 }
 
 .venue-info p {
     opacity: .8;
-    color: #fb6f28;
+    color: #f2eeeb;
     font-family: "Gambarino", serif;
     font-size: 18px;
 }
@@ -1337,12 +1337,8 @@ canvas {
     .event-card {
 
         width: calc(100% - 32px);
-
-        flex-direction: column;
-
-        bottom: 20px;
-
-        text-align: center;
+        margin: -20px auto 0;
+        border-radius: 24px;
 
     }
 
