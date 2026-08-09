@@ -1,120 +1,46 @@
-// =============================
-// AOS
-// =============================
-AOS.init({
-  duration: 600,
-  once: true
+
+// COUNTDOWN
+const weddingDate = new Date("May 8, 2027 00:00:00").getTime();
+
+setInterval(() => {
+  const now = new Date().getTime();
+  const diff = weddingDate - now;
+
+  document.getElementById("days").innerHTML = Math.floor(diff / (1000 * 60 * 60 * 24)) + "<br>Days";
+  document.getElementById("hours").innerHTML = Math.floor((diff / (1000 * 60 * 60)) % 24) + "<br>Hours";
+  document.getElementById("minutes").innerHTML = Math.floor((diff / (1000 * 60)) % 60) + "<br>Minutes";
+  document.getElementById("seconds").innerHTML = Math.floor((diff / 1000) % 60) + "<br>Seconds";
+}, 1000);
+
+// GSAP SECTION ANIMATIONS
+gsap.utils.toArray("section").forEach(section => {
+  gsap.from(section, {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    scrollTrigger: section
+  });
 });
 
-console.log("script loaded");
-// =============================
-// INTRO VIDEO
-// =============================
-const intro = document.getElementById("introVideo");
-const video = document.getElementById("weddingVideo");
-const tapText = document.getElementById("tapText");
-const hero = document.querySelector(".hero");
 
-if (intro && video && tapText && hero) {
-  let started = false;
 
-  intro.addEventListener("click", () => {
-    if (started) return;
-    started = true;
+// RSVP
+document.getElementById("rsvpForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-    gsap.to(tapText, {
-      opacity: 0,
-      duration: 0.5
-    });
+  const form = e.target;
+  const data = Object.fromEntries(new FormData(form));
 
-    video.play();
+  const res = await fetch("/api/rsvp", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
   });
 
-  video.addEventListener("ended", () => {
-    gsap.timeline()
-      .to("#introVideo", {
-        opacity: 0,
-        duration: 1
-      })
-      .set("#introVideo", {
-        display: "none"
-      })
-      .to(".hero", {
-        opacity: 1,
-        duration: 1.2
-      });
-  });
-}
+  const result = await res.json();
+  document.getElementById("response").innerText = result.message;
 
-// =============================
-// GSAP SECTION ANIMATIONS
-// =============================
-if (typeof gsap !== "undefined") {
-  gsap.utils.toArray("section").forEach((section) => {
-    gsap.from(section, {
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      scrollTrigger: {
-        trigger: section,
-        start: "top 80%"
-      }
-    });
-  });
-}
+  if (result.success) form.reset();
+});
 
-// =============================
-// RSVP FORM
-// =============================
-const rsvpForm = document.getElementById("rsvpForm");
 
-console.log("Form:", rsvpForm);
-
-if (rsvpForm) {
-
-  console.log("RSVP form found");
-
-  rsvpForm.addEventListener("submit", async (e) => {
-
-    e.preventDefault();
-
-    console.log("Submit intercepted");
-
-    const responseText = document.getElementById("response");
-
-    try {
-
-      const formData = Object.fromEntries(new FormData(rsvpForm));
-
-      console.log(formData);
-
-      responseText.innerText = "Sending...";
-
-      const res = await fetch("/api/rsvp", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData)
-      });
-
-      console.log("Status:", res.status);
-
-      const result = await res.json();
-
-      console.log(result);
-
-      responseText.innerText = result.message;
-
-      if (result.success) {
-        rsvpForm.reset();
-      }
-
-    } catch (err) {
-      console.error(err);
-      responseText.innerText = "Something went wrong. Please try again.";
-    }
-
-  });
-
-}

@@ -2,310 +2,865 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wedding Invitation | Manisha & Pavan</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation | Manisha & Pavan</title>
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap"
-    rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=telma@1,2,3,4,5,6&display=swap">
 
-  <!-- GSAP -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style-new.css">
 
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Poiret+One&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cookie&family=Poiret+One&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-
-  <!-- Background Music -->
-  <!-- <audio id="bgMusic" loop>
+    <!-- Background Music -->
+    <audio id="bgMusic" autoplay loop preload="auto">
     <source src="assets/bg-music.mp3" type="audio/mpeg">
-  </audio>
-  <button id="musicToggle" class="music-btn">🔊</button> -->
+</audio>
+    <!-- <button id="musicToggle" class="music-btn">🔊</button> -->
 
+    <section class="wedding-banner">
 
-  <!-- OPENING -->
-  <!-- <div id="opening">
-  <video id="openingVideo" src="assets/opening-video.mp4"></video>
-</div> -->
+        <img src="https://res.cloudinary.com/thyha7nn/image/upload/v1786262499/family-desktop.png"
+            class="banner-desktop" alt="">
+        <img src="https://res.cloudinary.com/thyha7nn/image/upload/v1786269376/famil.jpg" class="banner-mobile" alt="">
 
-  <!-- <div id="opening">
-    <div class="curtain left"></div>
-    <div class="curtain right"></div>
+        <div class="overlay"></div>
 
-    <button id="openCurtains" class="enter-btn">
-      Click to open
-    </button>
-  </div> -->
+        <div class="banner-content">
 
-  <!-- INTRO VIDEO -->
-<div id="introVideo">
+            <!-- <div class="tag">
+            
+                <span>A Celebration of Love</span>
+            </div> -->
 
-    <video id="weddingVideo" playsinline preload="auto">
-        <source src="assets/env-opening.mp4" type="video/mp4">
-    </video>
+            <div class="title-tag">
+                <p>We are getting married !</p>
+            </div>
 
-    <div id="tapText">
-        Tap to Open
-    </div>
+            <!-- <h1 class="hero-title">
+                Manisha <br>
+                &
+                <br>
+                Pavan
+            </h1> -->
 
-</div>
+            <h1 class="hero-title">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <small class="hero-subtitle">We are getting married</small>
+                <span class="name-block">
+                    Manisha
+                    <small>D.O Shambhavi & Vasant Shetty</small>
+                </span>
 
-      <h2 class="name"  >Manisha</h2>
+                <span class="ampersand">&</span>
 
-      <div class="ampersand">&</div>
+                <span class="name-block">
+                    Pavan
+                    <small>S.O Shashikala & Jayaram Shetty</small>
+                </span>
 
-      <h2 class="name">Pavan</h2>
+            </h1>
+<!-- Divider -->
+        <!-- <div class="hero-divider"></div> -->
+            <p class="hero-description">
+                Join us as we celebrate the beginning of our forever with
+                the people we love most.
+            </p>
 
-      <div class="divider-row">
-        <span class="h-px"></span>
-        <div class="divider">✦</div>
-        <span class="h-px"></span>
-      </div>
-
-      <p class="hero-date">15 DEC, 2026</p>
-
-      <p class="hero-cta">We would like to invite you to celebrate with us the most special day of our lives. It would
-        be an honor to have you present at this important moment.</p>
-    </div>
-    <div class="scroll-down"><i class="bi bi-chevron-double-down"></i></div>
-  </section>
-
-
-  <!-- COUNTDOWN -->
-  <!-- <section id="countdown">
-  <h2 class="section-title">Counting Down to Our Big Day</h2>
-  <div class="container">
-    <div class="row text-center">
-      <div class="col count-box" id="days"></div>
-      <div class="col count-box" id="hours"></div>
-      <div class="col count-box" id="minutes"></div>
-      <div class="col count-box" id="seconds"></div>
-    </div>
-  </div>
-</section> -->
-
-  <!-- LOCATION -->
-  <section class="details-section">
-    <div class="details-header">
-      <h2 data-aos="zoom-in">Details of the day</h2>
-      <p>Everything you need to know</p>
-    </div>
-
-    <div class="details-card">
-      <div class="details-top">
-        <div class="icon-circle">
-          <i class="bi bi-geo-alt"></i>
         </div>
-        <h3>Location</h3>
-        <p class="location-name">Kadekar, Karnataka</p>
-        <p class="time"><i class="bi bi-clock"></i> From 5:00 PM to 11:00 PM</p>
-      </div>
 
-      <div class="venue-image">
-        <img src="assets/location-img.avif" alt="Wedding venue">
-      </div>
+        
 
-      <div class="map-wrap">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3882.3335661324036!2d74.7181514!3d13.329514699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcbb961e27848d%3A0x5fab96f1ea288767!2sSea%20View%20Resort!5e0!3m2!1sen!2sin!4v1783267377726!5m2!1sen!2sin" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+        <!-- Bottom Glass Card -->
+        <div class="event-card">
 
-        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3882.3335661324036!2d74.7181514!3d13.329514699999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcbb961e27848d%3A0x5fab96f1ea288767!2sSea%20View%20Resort!5e0!3m2!1sen!2sin!4v1783267377726!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe> -->
-      </div>
+            <!-- <div class="venue-image">
+            <img src="assets/church.jpg" alt="">
+        </div> -->
 
-      <!-- <div class="card-actions">
-      <a href="#" class="btn">Open in Maps</a>
-      <a href="#" class="btn outline">Add to calendar</a>
-    </div> -->
+            <div class="venue-info">
+                <h4>Sea View Resort</h4>
+                <p>Karnataka, 576103</p>
+            </div>
+
+            <!-- <div class="event-date">
+            <span>13</span>
+            <small>December 2026</small>
+        </div> -->
+
+            <div class="g-map">
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15529.334245264181!2d74.718151!3d13.329515!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbcbb961e27848d%3A0x5fab96f1ea288767!2sSea%20View%20Resort!5e0!3m2!1sen!2sin!4v1785669873226!5m2!1sen!2sin"
+                    loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- <section class="date-section">
+
+    </section> -->
+
+    <section class="scratch-section">
+
+        <div class="scratch-card">
+
+            <div class="hidden-content">
+
+                <p class="subtitle">Save the Date</p>
+
+                <h1>13 December, 2026</h1>
+
+                <!-- <p class="invite">Together with our families,<br>
+                we invite you to celebrate our wedding.
+            </p> -->
+
+                <!-- <div class="divider"></div> -->
+
+                <div class="countdown">
+                    <div>
+                        <span id="days">00</span>
+                        <small>Days</small>
+                    </div>
+
+                    <div>
+                        <span id="hours">00</span>
+                        <small>Hours</small>
+                    </div>
+
+                    <div>
+                        <span id="minutes">00</span>
+                        <small>Minutes</small>
+                    </div>
+
+                    <div>
+                        <span id="seconds">00</span>
+                        <small>Seconds</small>
+                    </div>
+                </div>
+
+            </div>
+
+            <canvas id="scratchCanvas"></canvas>
+
+        </div>
+
+    </section>
+
+    <!-- Programs of the day -->
+    <section class="programs">
+
+        <div class="programs-heading">
+            <h2 id="programs-title">Here's how things<br>will unfold</h2>
+        </div>
+
+        <div class="programs-timeline">
+
+            <!-- =======================
+                PROGRAM 01
+            ======================== -->
+            <article class="program-item">
+
+                <div class="program-media" data-aos="fade-right">
+                    <img src="https://res.cloudinary.com/thyha7nn/image/upload/v1786274135/sangeet-new.png"
+                        alt="Designing solutions">
+                </div>
+
+                <div class="program-content">
+
+                    <!-- <span class="program-label">WHO WE ARE</span> -->
+
+                    <h3>
+                        Sundowner Soirée
+                    </h3>
+
+                    <p>
+                        Join us for an evening of mehendi, music, dance, laughter, and unforgettable moments as we
+                        celebrate together beneath the setting sun.
+                    </p>
+
+                    <span class="dc">Dresscode: Shimmer & Shine</span>
+
+                    <a href="#" class="program-link">
+                        <span>11 December 2026</span>
+                        <!-- <span class="arrow">→</span> -->
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- =======================
+                PROGRAM 02
+            ======================== -->
+            <article class="program-item reverse">
+
+                <div class="program-media" data-aos="fade-left">
+                    <img src="https://res.cloudinary.com/thyha7nn/image/upload/v1786278538/wedding.png"
+                        alt="Turning ideas into experiences">
+                </div>
+
+                <div class="program-content">
+
+                    <!-- <span class="program-label">OUR JOURNEY</span> -->
+
+                    <h3>
+                        The Sacred Vows
+                    </h3>
+
+                    <p>
+                        With the blessings of our families, we invite you to witness the beginning of our forever as we
+                        exchange our sacred vows.
+                    </p>
+
+                    <span class="dc">Dresscode: Full South Scene</span>
+
+                    <a href="#" class="program-link">
+                        <span>13 December 2026</span>
+                        <!-- <span class="arrow">→</span> -->
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <section class="couple-photo">
+        <div class="c-img">
+            <img src="https://res.cloudinary.com/thyha7nn/image/upload/v1786262506/couple.png" alt="couple-img">
+
+            <div class="falling-flowers">
+                <span>✿</span>
+                <span>❀</span>
+                <span>✿</span>
+                <span>❀</span>
+                <span>✿</span>
+                <span>❀</span>
+                <span>✿</span>
+                <span>❀</span>
+                <span>✿</span>
+                <span>❀</span>
+                <span>✿</span>
+                <span>❀</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="rsvp">
+        <div class="container">
+            <h2 id="rsvp-title">
+                We’d love to celebrate with you
+            </h2>
+            <p>Kindly let us know if you’ll be joining us.</p>
+        </div>
     </div>
-  </section>
-  <div class="divider-row">
-    <span class="h-px"></span>
-    <div class="divider">✦</div>
-    <span class="h-px"></span>
-  </div>
+    <form id="rsvpForm">
+        <input name="full_name" required placeholder="Full name" />
+        <input name="email" placeholder="Email (optional)" />
 
 
-  <!-- PROGRAM -->
-  <section class="program">
-    <h2 class="section-title" data-aos="zoom-in">Program of the Day</h2>
+        <p>Will you attend? *</p>
+        <label>
+            <input type="radio" name="attending" value="yes" checked> Yes, I will attend.
+        </label>
+        <label>
+            <input type="radio" name="attending" value="no"> I will not be able to attend
+        </label>
 
-    <div class="timeline">
+        <p>Number of guests (including you):</p>
+        <input type="number" name="guests" value="1" min="1" />
 
-      <div class="timeline-item">
-        <span class="time">17:00</span>
-        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="lucide lucide-heart w-5 h-5">
-            <path
-              d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
-            </path>
-          </svg></div>
-        <h4>Arrival of guests</h4>
-        <p>Reception and welcome at the estate</p>
-      </div>
+        <textarea name="allergies" placeholder="Allergies or Restrictions"></textarea>
 
-      <div class="timeline-item">
-        <span class="time">17:30</span>
-        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="lucide lucide-wine w-5 h-5">
-            <path d="M8 22h8"></path>
-            <path d="M7 10h10"></path>
-            <path d="M12 15v7"></path>
-            <path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"></path>
-          </svg></div>
-        <h4>Welcome Drink</h4>
-        <p>Welcome cocktail while we wait</p>
-      </div>
+        <textarea name="message" placeholder="Message for the bride and groom (optional)"></textarea>
 
-      <div class="timeline-item">
-        <span class="time">18:00</span>
-        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="lucide lucide-church w-5 h-5">
-            <path d="M10 9h4"></path>
-            <path d="M12 7v5"></path>
-            <path d="M14 22v-4a2 2 0 0 0-4 0v4"></path>
-            <path d="M18 22V5.618a1 1 0 0 0-.553-.894l-4.553-2.277a2 2 0 0 0-1.788 0L6.553 4.724A1 1 0 0 0 6 5.618V22">
-            </path>
-            <path
-              d="m18 7 3.447 1.724a1 1 0 0 1 .553.894V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.618a1 1 0 0 1 .553-.894L6 7">
-            </path>
-          </svg></div>
-        <h4>Ceremony</h4>
-        <p>The most special moment of the day</p>
-      </div>
+        <button>Send Confirmation</button>
+        <p id="response"></p>
+    </form>
 
-      <!-- <div class="timeline-item">
-      <span class="time">19:00</span>
-      <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wine w-5 h-5"><path d="M8 22h8"></path><path d="M7 10h10"></path><path d="M12 15v7"></path><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"></path></svg></div>
-      <h4>Cocktail</h4>
-      <p>Snacks and drinks in the gardens</p>
-    </div> -->
-
-      <div class="timeline-item">
-        <span class="time">21:00</span>
-        <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="lucide lucide-utensils-crossed w-5 h-5">
-            <path d="m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8"></path>
-            <path d="M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7"></path>
-            <path d="m2.1 21.8 6.4-6.3"></path>
-            <path d="m19 5-7 7"></path>
-          </svg></div>
-        <h4>Banquet</h4>
-        <p>Dinner and celebration</p>
-      </div>
-
-      <!-- <div class="timeline-item">
-      <span class="time">00:00</span>
-      <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-music w-5 h-5"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg></div>
-      <h4>Fiesta</h4>
-      <p>Let's dance until dawn!</p>
-    </div> -->
-      <!-- 
-    <div class="timeline-item">
-      <span class="time">03:00</span>
-      <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-party-popper w-5 h-5"><path d="M5.8 11.3 2 22l10.7-3.79"></path><path d="M4 3h.01"></path><path d="M22 8h.01"></path><path d="M15 2h.01"></path><path d="M22 20h.01"></path><path d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10"></path><path d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11c-.11.7-.72 1.22-1.43 1.22H17"></path><path d="m11 2 .33.82c.34.86-.2 1.82-1.11 1.98C9.52 4.9 9 5.52 9 6.23V7"></path><path d="M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z"></path></svg></div>
-      <h4>End of the party</h4>
-      <p>Farewell and fond memories</p>
-    </div> -->
-
+    <!-- closing line -->
+    <div class="closing-line">
+        <p id="closingText">
+            See you there. <br> Don’t be late.
+        </p>
     </div>
-  </section>
-
-  <div class="divider-row">
-    <span class="h-px"></span>
-    <div class="divider">✦</div>
-    <span class="h-px"></span>
-  </div>
-
-  <!-- rsvp -->
-  <div class="rsvp">
-    <div class="container">
-      <h2 data-aos="zoom-in">
-        Confirm your attendance
-      </h2>
-      <p>We hope to have you join us.</p>
-    </div>
-  </div>
-  <form id="rsvpForm">
-    <input name="full_name" required placeholder="Full name" />
-    <input name="email" placeholder="Email (optional)" />
 
 
-    <p>Will you attend? *</p>
-    <label>
-      <input type="radio" name="attending" value="yes" checked> Yes, I will attend.
-    </label>
-    <label>
-      <input type="radio" name="attending" value="no"> I will not be able to attend
-    </label>
+    <!-- Javascript -->
+    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Animation duration in milliseconds
+            once: false     // Set to false so it fades out when scrolling away
+        });
+    </script>
 
-    <p>Number of guests (including you):</p>
-    <input type="number" name="guests" value="1" min="1" />
+    <!-- Bg music -->
+    <script>
+const bgMusic = document.getElementById("bgMusic");
 
-    <textarea name="allergies" placeholder="Allergies or Restrictions"></textarea>
+bgMusic.volume = 0.5;
 
-    <textarea name="message" placeholder="Message for the bride and groom (optional)"></textarea>
+window.addEventListener("load", () => {
+    bgMusic.play()
+        .then(() => {
+            console.log("Music autoplayed");
+        })
+        .catch(err => {
+            console.log("Autoplay blocked:", err);
+        });
+});
+</script>
 
-    <button type="submit">Send Confirmation</button>
-    <p id="response"></p>
-  </form>
+    <!-- main -->
+    <script>
+        window.addEventListener("load", () => {
+
+            const tl = gsap.timeline();
+
+            /* =========================================
+               1. HOLD SHARP IMAGE
+            ========================================= */
+
+            tl.to({}, {
+                duration: 2
+            });
 
 
+            /* =========================================
+               2. BLUR + DARKEN IMAGE
+            ========================================= */
+
+            tl.to(".banner-desktop, .banner-mobile", {
+                filter: "blur(8px)",
+                scale: 1.04,
+                duration: 3,
+                ease: "power2.inOut"
+            });
+
+            tl.to(".overlay", {
+                backgroundColor: "rgba(0,0,0,0.25)",
+                duration: 2,
+                ease: "power2.out"
+            }, "<");
 
 
+            /* =========================================
+               3. SHOW TITLE
+            ========================================= */
 
-  <!-- MESSAGE -->
-  <section class="message">
-    <h2 data-aos="zoom-in">With Love</h2>
-    <div class="container text-center">
-      <p class="msg-p">
-        We, along with our families, warmly invite you to celebrate
-        the beginning of our forever together.
-      </p>
-    </div>
-  </section>
+            tl.to(".banner-content", {
+                opacity: 1,
+                duration: 0.8,
+                ease: "power2.out"
+            });
 
-  <!-- FOOTER -->
-  <footer>
-    <h3>Manisha & Pavan</h3>
-    <p>Dec 15, 2026</p>
-    <div class="footer-last">
-      <p>Developed by <a href="https://sukanya2303.github.io/sukanya-kokani-portfolio/">Sukanya</a></p>
-    </div>
-  </footer>
 
-  <!-- Javascript -->
+            /* Small heading */
 
-  <script src="script.js" defer></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+            tl.from(".title-tag", {
+                y: 30,
+                opacity: 0,
+                duration: 0.7,
+                ease: "power3.out"
+            }, "-=0.4");
 
-  
+
+            /* Main title */
+
+            tl.from(".hero-title", {
+                y: 70,
+                opacity: 0,
+                duration: 1.2,
+                ease: "power3.out"
+            }, "-=0.3");
+
+
+            /* Description */
+
+            tl.from(".hero-description", {
+                y: 30,
+                opacity: 0,
+                duration: 0.8,
+                ease: "power2.out"
+            }, "-=0.6");
+
+
+            /* =========================================
+               4. DIVIDER
+            ========================================= */
+
+            tl.to(".hero-divider", {
+                opacity: 1,
+                duration: 0.8,
+                ease: "power2.out"
+            }, "-=0.3");
+
+
+            /* =========================================
+               5. EVENT CARD
+            ========================================= */
+
+            tl.to(".event-card", {
+                opacity: 1,
+                duration: 1,
+                ease: "power2.out"
+            }, "-=0.2");
+
+        });
+    </script>
+
+    <!-- Scrath Card -->
+    <script>
+        const canvas = document.getElementById("scratchCanvas");
+        const ctx = canvas.getContext("2d");
+
+        const card = document.querySelector(".scratch-card");
+
+        // Set canvas size
+        const rect = card.getBoundingClientRect();
+        canvas.width = rect.width;
+        canvas.height = rect.height;
+
+        let isDrawing = false;
+
+        // Load scratch texture
+        const cover = new Image();
+        cover.src = "assets/gold-textured.jpg";
+
+        cover.onload = () => {
+            console.log("Gold texture loaded!");
+
+            // Normal drawing mode
+            ctx.globalCompositeOperation = "source-over";
+
+            ctx.drawImage(cover, 0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = "#fff";
+            ctx.font = "700 36px 'Telma', cursive";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+
+            ctx.fillText(
+                "Scratch to Reveal",
+                canvas.width / 2,
+                canvas.height / 2
+            );
+        };
+
+        cover.onerror = () => {
+            console.error("Gold texture could not be loaded.");
+
+            // Fallback color
+            ctx.fillStyle = "#C89B3C";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = "#fff";
+            ctx.font = "700 36px 'Telma', cursive";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.fillText(
+                "Scratch to Reveal",
+                canvas.width / 2,
+                canvas.height / 2
+            );
+
+
+        };
+
+        function scratch(x, y) {
+            ctx.save();
+
+            ctx.globalCompositeOperation = "destination-out";
+
+            ctx.beginPath();
+            ctx.arc(x, y, 42, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.restore();
+        }
+
+        function getPosition(e) {
+            const rect = canvas.getBoundingClientRect();
+
+            if (e.touches) {
+                return {
+                    x: e.touches[0].clientX - rect.left,
+                    y: e.touches[0].clientY - rect.top
+                };
+            }
+
+            return {
+                x: e.clientX - rect.left,
+                y: e.clientY - rect.top
+            };
+        }
+
+        // Desktop
+        canvas.addEventListener("mousedown", () => isDrawing = true);
+
+        canvas.addEventListener("mouseup", () => {
+            isDrawing = false;
+            checkReveal();
+        });
+
+        canvas.addEventListener("mouseleave", () => isDrawing = false);
+
+        canvas.addEventListener("mousemove", (e) => {
+            if (!isDrawing) return;
+
+            const pos = getPosition(e);
+            scratch(pos.x, pos.y);
+        });
+
+        // Mobile
+        canvas.addEventListener("touchstart", () => isDrawing = true);
+
+        canvas.addEventListener("touchend", () => {
+            isDrawing = false;
+            checkReveal();
+        });
+
+        canvas.addEventListener("touchmove", (e) => {
+            e.preventDefault();
+
+            if (!isDrawing) return;
+
+            const pos = getPosition(e);
+            scratch(pos.x, pos.y);
+
+        }, { passive: false });
+
+        function checkReveal() {
+
+            const pixels = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+
+            let transparent = 0;
+
+            for (let i = 3; i < pixels.length; i += 4) {
+                if (pixels[i] === 0) transparent++;
+            }
+
+            const percent = (transparent / (canvas.width * canvas.height)) * 100;
+
+            if (percent > 60) {
+
+                fireConfetti();   // <-- Add this
+
+                canvas.style.transition = "opacity .7s ease, transform .7s ease";
+                canvas.style.transform = "scale(.05)";
+                canvas.style.opacity = "0";
+
+                card.classList.add("celebrate");
+
+                setTimeout(() => {
+                    canvas.remove();
+                }, 700);
+            }
+        }
+        function fireConfetti() {
+
+            const rect = card.getBoundingClientRect();
+
+            const leftX = rect.left / window.innerWidth;
+            const rightX = rect.right / window.innerWidth;
+            const centerY = (rect.top + rect.height / 2) / window.innerHeight;
+
+            confetti({
+                particleCount: 140,
+                spread: 80,
+                angle: 60,
+                startVelocity: 60,
+                origin: {
+                    x: leftX,
+                    y: centerY
+                }
+            });
+
+            confetti({
+                particleCount: 140,
+                spread: 80,
+                angle: 120,
+                startVelocity: 60,
+                origin: {
+                    x: rightX,
+                    y: centerY
+                }
+            });
+        }
+
+        // Wedding date
+        const weddingDate = new Date("December 13, 2026 00:00:00").getTime();
+
+        function updateCountdown() {
+
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance <= 0) {
+                document.getElementById("days").textContent = "00";
+                document.getElementById("hours").textContent = "00";
+                document.getElementById("minutes").textContent = "00";
+                document.getElementById("seconds").textContent = "00";
+                clearInterval(timer);
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+            const hours = Math.floor(
+                (distance % (1000 * 60 * 60 * 24)) /
+                (1000 * 60 * 60)
+            );
+
+            const minutes = Math.floor(
+                (distance % (1000 * 60 * 60)) /
+                (1000 * 60)
+            );
+
+            const seconds = Math.floor(
+                (distance % (1000 * 60)) /
+                1000
+            );
+
+            document.getElementById("days").textContent =
+                String(days).padStart(2, "0");
+
+            document.getElementById("hours").textContent =
+                String(hours).padStart(2, "0");
+
+            document.getElementById("minutes").textContent =
+                String(minutes).padStart(2, "0");
+
+            document.getElementById("seconds").textContent =
+                String(seconds).padStart(2, "0");
+        }
+
+        // Run immediately
+        updateCountdown();
+
+        // Update every second
+        const timer = setInterval(updateCountdown, 1000);
+    </script>
+
+    <!-- Programs -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const title = document.querySelector("#programs-title");
+
+            const text1 = "Here's how things";
+            const text2 = "will unfold";
+
+            let i = 0;
+            let j = 0;
+
+            title.innerHTML = "";
+
+            const observer = new IntersectionObserver((entries) => {
+
+                if (entries[0].isIntersecting) {
+
+                    title.classList.add("typing");
+
+                    const line1 = document.createElement("span");
+                    const line2 = document.createElement("span");
+
+                    title.appendChild(line1);
+                    title.appendChild(document.createElement("br"));
+                    title.appendChild(line2);
+
+                    function typeLine1() {
+                        if (i < text1.length) {
+                            line1.textContent += text1.charAt(i);
+                            i++;
+                            setTimeout(typeLine1, 70);
+                        } else {
+                            setTimeout(typeLine2, 150);
+                        }
+                    }
+
+                    function typeLine2() {
+                        if (j < text2.length) {
+                            line2.textContent += text2.charAt(j);
+                            j++;
+                            setTimeout(typeLine2, 70);
+                        }
+                    }
+
+                    typeLine1();
+
+                    observer.unobserve(title);
+                }
+
+            }, {
+                threshold: 0.3
+            });
+
+            observer.observe(title);
+
+        });
+    </script>
+
+    <!-- RSVP -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const title = document.querySelector("#rsvp-title");
+
+            const text1 = "We’d love to celebrate with you.";
+            // const text2 = "";
+
+            let i = 0;
+            let j = 0;
+
+            title.innerHTML = "";
+
+            const observer = new IntersectionObserver((entries) => {
+
+                if (entries[0].isIntersecting) {
+
+                    title.classList.add("typing");
+
+                    const line1 = document.createElement("span");
+                    const line2 = document.createElement("span");
+
+                    title.appendChild(line1);
+                    title.appendChild(document.createElement("br"));
+                    title.appendChild(line2);
+
+                    function typeLine1() {
+                        if (i < text1.length) {
+                            line1.textContent += text1.charAt(i);
+                            i++;
+                            setTimeout(typeLine1, 70);
+                        } else {
+                            setTimeout(typeLine2, 150);
+                        }
+                    }
+
+                    function typeLine2() {
+                        if (j < text2.length) {
+                            line2.textContent += text2.charAt(j);
+                            j++;
+                            setTimeout(typeLine2, 70);
+                        }
+                    }
+
+                    typeLine1();
+
+                    observer.unobserve(title);
+                }
+
+            }, {
+                threshold: 0.3
+            });
+
+            observer.observe(title);
+
+        });
+    </script>
+
+    <!-- closing Text -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const text = document.querySelector("#closingText");
+
+            const line1 = "See you there.";
+            const line2 = "Don’t be late.";
+
+            let i = 0;
+            let j = 0;
+
+            text.innerHTML = "";
+
+            const firstLine = document.createElement("span");
+            const secondLine = document.createElement("span");
+
+            text.appendChild(firstLine);
+            text.appendChild(document.createElement("br"));
+            text.appendChild(secondLine);
+
+            function typeFirstLine() {
+
+                if (i < line1.length) {
+                    firstLine.textContent += line1.charAt(i);
+                    i++;
+
+                    setTimeout(typeFirstLine, 65);
+
+                } else {
+
+                    setTimeout(typeSecondLine, 250);
+
+                }
+            }
+
+
+            function typeSecondLine() {
+
+                if (j < line2.length) {
+                    secondLine.textContent += line2.charAt(j);
+                    j++;
+
+                    setTimeout(typeSecondLine, 55);
+                }
+
+            }
+
+
+            const observer = new IntersectionObserver((entries) => {
+
+                if (entries[0].isIntersecting) {
+
+                    text.classList.add("typing");
+
+                    typeFirstLine();
+
+                    observer.unobserve(text);
+                }
+
+            }, {
+                threshold: 0.4
+            });
+
+
+            observer.observe(text);
+
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 </body>
 
 </html>
