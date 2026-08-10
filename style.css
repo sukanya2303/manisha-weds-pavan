@@ -1266,8 +1266,8 @@ canvas {
 
     /* background: rgba(50, 50, 50, 0.838); */
     /* background: #fc6a03; //c1 */
-    /* background: #fcae1e; //c2 */
-    background: #ec9706;
+    background: #fcae1e;
+    /* background: #ec9706; */
 
     /* background: #a9153d; */
     /* backdrop-filter: blur(25px); */
@@ -1520,8 +1520,8 @@ canvas {
   letter-spacing: 1px;
   border: none;
   /* background: #D53300; */
-   background: #fc6a03; 
-    /* background: #fcae1e; //c2 */
+   /* background: #fc6a03;  */
+    background: #fcae1e;
     /* background: #ec9706; */
   color: #ffffff;
   font-size: 16px;
@@ -1535,7 +1535,7 @@ canvas {
 }
 
 #rsvpForm button:hover {
-  background: #e03804;
+  background: #f9b12c;
   transform: translateY(-1px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
