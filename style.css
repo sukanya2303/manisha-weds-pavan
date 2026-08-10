@@ -1363,7 +1363,9 @@ canvas {
         height: 180px;
 
     }
-
+    .venue-heading h2 {
+        font-size: clamp(2.5rem, 11vw, 4rem);
+    }
     .venue-info {
 
         padding: 10px;
@@ -1404,11 +1406,19 @@ canvas {
 .rsvp{
   margin: 80px 0 50px;
 }
-.rsvp h2{
+/* .rsvp h2{
   font-size: clamp(2.5rem, 5vw, 5rem);
   text-align: center;
   font-family: "Crimson", serif;
-  /* letter-spacing: 2px; */
+} */
+
+.rsvp h2 {
+    font-family: "Crimson", serif;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: 400;
+    line-height: 1.1;
+    color: #1f1a17;
+    text-align: center;
 }
 .rsvph2.typing {
     opacity: 1;
@@ -1544,7 +1554,7 @@ canvas {
     margin: 0 20px;
   }
   .rsvp h2{
-    font-size: 2.3rem;
+    font-size: clamp(2.5rem, 11vw, 4rem);
   }
 }
  
