@@ -73,10 +73,19 @@
 
 <body>
     <!-- Background Music -->
+    <!-- <audio id="bgMusic" loop>
+        <source src="bg-music.mp3" type="audio/mpeg">
+    </audio>
+    <button id="musicToggle" class="music-btn">🔊</button> -->
+
     <audio id="bgMusic" loop>
         <source src="bg-music.mp3" type="audio/mpeg">
     </audio>
-    <button id="musicToggle" class="music-btn">🔊</button>
+
+    <button id="musicToggle" class="music-btn">
+        <span class="music-hint">Tap Me</span>
+        🎵
+    </button>
 
     <section class="wedding-banner">
 
@@ -378,7 +387,7 @@
     </script>
 
     <!-- Bg music -->
-    <script>
+    <!-- <script>
         const bgMusic = document.getElementById("bgMusic");
         const musicToggle = document.getElementById("musicToggle");
 
@@ -397,7 +406,32 @@
             }
 
         });
-    </script>
+    </script> -->
+
+
+    <script>
+    const bgMusic = document.getElementById("bgMusic");
+    const musicToggle = document.getElementById("musicToggle");
+
+    bgMusic.volume = 0.5;
+
+    musicToggle.addEventListener("click", () => {
+
+        if (bgMusic.paused) {
+            bgMusic.play();
+
+            musicToggle.innerHTML = "🔊";
+            musicToggle.classList.add("playing");
+
+        } else {
+            bgMusic.pause();
+
+            musicToggle.innerHTML = "🔇";
+            musicToggle.classList.remove("playing");
+        }
+
+    });
+</script>
 
     <!-- main -->
     <!-- <script>
